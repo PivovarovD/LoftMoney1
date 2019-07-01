@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/add_button"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/add_item_start"
+        android:paddingStart="@dimen/add_item_end"
+        android:paddingEnd="@dimen/add_item_right"
+        >
+        <EditText
+            android:id="@+id/title_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:hint="@string/title_hint"
+            android:textColor="@color/title_text_color"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/price_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="24sp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/title_text_color"
+            android:hint="@string/price_hint"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:layout_gravity="center"
+        android:text="@string/add_button_text"
+        android:textColor="@color/add_button_color_inactive"
+        />
+
+
+</RelativeLayout>

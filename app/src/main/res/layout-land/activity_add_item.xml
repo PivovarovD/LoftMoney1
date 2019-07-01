@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/add_item_end"
+    android:layout_marginEnd="@dimen/add_item_right"
+    >
+
+    <EditText
+        android:id="@+id/title_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:hint="@string/title_hint"
+        android:textColor="@color/title_text_color"
+        android:inputType="text"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_above="@+id/price_edittext"
+        android:layout_marginBottom="25dp"
+        />
+
+    <EditText
+        android:id="@+id/price_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="24sp"
+        android:textColor="@color/title_text_color"
+        android:hint="@string/price_hint"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price_edittext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/add_item_start"
+        >
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="@string/add_button_text"
+        android:textColor="@color/add_button_color_inactive"
+        />
+    </LinearLayout>
+</RelativeLayout>

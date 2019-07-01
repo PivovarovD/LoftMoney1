@@ -8,9 +8,14 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/hello_world"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Привет мир!"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
         android:layout_gravity="center"
         />
 
