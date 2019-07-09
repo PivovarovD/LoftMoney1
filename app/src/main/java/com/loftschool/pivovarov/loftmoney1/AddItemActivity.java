@@ -1,5 +1,7 @@
 package com.loftschool.pivovarov.loftmoney1;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -7,8 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import javax.xml.transform.Result;
 
 public class AddItemActivity extends AppCompatActivity {
 
@@ -66,6 +71,14 @@ public class AddItemActivity extends AppCompatActivity {
             }
         });
 
+        addButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(final View v) {
+                setResult(Activity.RESULT_OK, new Intent().putExtra("name", title).putExtra("price", price));
+                finish();
+            }
+        });
     }
 
 

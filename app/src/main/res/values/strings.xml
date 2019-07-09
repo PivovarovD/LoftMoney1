@@ -3,4 +3,8 @@
     <string name="title_hint">Title</string>
     <string name="price_hint">Price</string>
     <string name="add_button_text">Add</string>
+    <string name="add_text_hello">Hello world!</string>
+
+    <string name="price_template">%1$s ₽</string>
+    <string name="budget_title">Учет бюджета</string>
 </resources>

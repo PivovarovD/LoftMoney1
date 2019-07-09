@@ -12,9 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Привет мир!"
+        android:text="@string/add_text_hello"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="@dimen/add_text_size_30sp"
         android:textStyle="bold"
         android:layout_gravity="center"
         />

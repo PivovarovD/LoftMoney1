@@ -3,4 +3,7 @@
     <dimen name="add_item_start">68dp</dimen>
     <dimen name="add_item_end">33dp</dimen>
     <dimen name="add_item_right">104dp</dimen>
+    <dimen name="add_text_size_24sp">24sp</dimen>
+    <dimen name="add_item_top">25dp</dimen>
+    <dimen name="add_text_size_30sp">30sp</dimen>
 </resources>
