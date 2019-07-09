@@ -11,14 +11,14 @@
         android:id="@+id/title_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="@dimen/add_text_size_24sp"
         android:hint="@string/title_hint"
         android:textColor="@color/title_text_color"
         android:inputType="text"
         android:gravity="center"
         android:layout_centerVertical="true"
         android:layout_above="@+id/price_edittext"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="@dimen/add_item_top"
         />
 
     <EditText
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:textSize="24sp"
+        android:textSize="@dimen/add_text_size_24sp"
         android:textColor="@color/title_text_color"
         android:hint="@string/price_hint"
         android:gravity="center"
