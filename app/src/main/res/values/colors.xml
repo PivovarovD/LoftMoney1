@@ -9,4 +9,7 @@
     <color name="medium_grey">#666664</color>
     <color name="dark_sky_blue">#4a90e2</color>
     <color name="divider_color">#efefef</color>
+
+    <color name="tab_indicator_color">#ffc107</color>
+    <color name="income_price_color">#7ed321</color>
 </resources>

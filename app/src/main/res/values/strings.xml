@@ -6,5 +6,8 @@
     <string name="add_text_hello">Hello world!</string>
 
     <string name="price_template">%1$s ₽</string>
-    <string name="budget_title">Учет бюджета</string>
+    <string name="budget_title">Budget accounting</string>
+
+    <string name="outcome">Outcome</string>
+    <string name="income">Income</string>
 </resources>
