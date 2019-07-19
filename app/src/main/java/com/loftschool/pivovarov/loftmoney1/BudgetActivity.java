@@ -45,9 +45,9 @@ public class BudgetActivity extends AppCompatActivity {
         public Fragment getItem(int i) {
             switch (i) {
                 case 0:
-                    return BudgetFragment.newInstance(R.color.dark_sky_blue);
+                    return BudgetFragment.newInstance(FragmentType.income);
                 case 1:
-                    return BudgetFragment.newInstance(R.color.income_price_color);
+                    return BudgetFragment.newInstance(FragmentType.expense);
             }
             return null;
         }
