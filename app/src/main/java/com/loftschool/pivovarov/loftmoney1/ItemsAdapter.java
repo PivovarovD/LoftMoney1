@@ -45,7 +45,10 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
         notifyItemInserted(mItemList.size());
     }
 
-
+    public void clear() {
+        mItemList.clear();
+        notifyDataSetChanged();
+    }
 
     static class ItemViewHolder extends RecyclerView.ViewHolder {
 
@@ -60,7 +63,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
         }
 
         public void bindItem(final Item item) {
-            mNameView.setText(mNameView.getText().toString() + " " + item.getName());
+            mNameView.setText(item.getName());
             mPriceView.setText(
                     mPriceView.getContext().getResources().getString(R.string.price_template, String.valueOf(item.getPrice())));
         }
