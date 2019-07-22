@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         String androidId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
 
 
+        saveToken("$2y$10$UoA1T4h7zyNwoWOTzThx0uvE2.uqSCXxxVQnWLJsOd72yzzr2sB06");
         Call<AuthResponse> authCall = api.auth(androidId);
         authCall.enqueue(new Callback<AuthResponse>() {
 
@@ -80,16 +81,20 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(
                     final Call<AuthResponse> call, final Response<AuthResponse> response
             ) {
-                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("auth_token", response.body().getAuthToken());
-                editor.apply();
+                saveToken(response.body().getAuthToken());
             }
 
             @Override
             public void onFailure(Call<AuthResponse> call, Throwable t) {
-
+                t.printStackTrace();
             }
         });
+    }
+
+    private void saveToken(final String token) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("auth_token", token);
+        editor.apply();
     }
 }

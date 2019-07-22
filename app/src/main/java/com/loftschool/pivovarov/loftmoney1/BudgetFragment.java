@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,6 +32,7 @@ public class BudgetFragment extends Fragment {
 
     public static final int REQUEST_CODE = 1001;
 
+    private SwipeRefreshLayout mSwipeRefreshLayout;
     private ItemsAdapter mItemsAdapter;
     private Api mApi;
 
@@ -68,20 +71,18 @@ public class BudgetFragment extends Fragment {
         View fragmentView = inflater.inflate(R.layout.fragment_budget, container, false);
 
         RecyclerView recyclerView = fragmentView.findViewById(R.id.recycler_view);
+        mSwipeRefreshLayout = fragmentView.findViewById(R.id.refresh);
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadItems();
+            }
+        });
 
         mItemsAdapter = new ItemsAdapter(getArguments().getInt(PRICE_COLOR));
 
         recyclerView.setAdapter(mItemsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        Button openAddScreenButton = fragmentView.findViewById(R.id.open_add_screen);
-        openAddScreenButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                startActivityForResult(new Intent(getContext(), AddItemActivity.class), REQUEST_CODE);
-            }
-        });
 
         return fragmentView;
     }
@@ -119,6 +120,7 @@ public class BudgetFragment extends Fragment {
             public void onResponse(
                     final Call<List<Item>> call, final Response<List<Item>> response
             ) {
+                mSwipeRefreshLayout.setRefreshing(false);
                mItemsAdapter.clear();
                 List<Item> itemsList = response.body();
 
@@ -128,7 +130,8 @@ public class BudgetFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<List<Item>> call, Throwable t) {
+            public void onFailure(final Call<List<Item>> call, final Throwable t) {
+                mSwipeRefreshLayout.setRefreshing(false);
                 t.printStackTrace();
             }
         });
