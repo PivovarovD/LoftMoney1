@@ -11,4 +11,6 @@
     <string name="outcome">Расходы</string>
     <string name="income">Доходы</string>
     <string name="enter_button_title">Войти</string>
+    <string name="remove_title">Удалить</string>
+    <string name="remove_confirmation">Вы действительно хотите удалить выбранные элементы?</string>
 </resources>
