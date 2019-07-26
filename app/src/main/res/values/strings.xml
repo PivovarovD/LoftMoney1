@@ -13,4 +13,6 @@
     <string name="enter_button_title">Enter</string>
     <string name="remove_title">Delete</string>
     <string name="remove_confirmation">Do you really want to delete selected items?</string>
+    <string name="balance">Balance</string>
+    <string name="finances">Доступные финансы</string>
 </resources>
