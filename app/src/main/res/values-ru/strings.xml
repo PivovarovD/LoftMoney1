@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">ЛофтДеньги</string>
     <string name="title_hint">Название</string>
     <string name="price_hint">Цена</string>
     <string name="add_button_text">Добавить</string>
