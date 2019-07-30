@@ -10,9 +10,37 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
+
+    signingConfigs {
         release {
-            minifyEnabled false
+            storeFile file ("release_keystore.jks")
+            storePassword 'LbvfFyz1408!$'
+            keyAlias 'loft_alias'
+            keyPassword 'LbvfFyz1408!$'
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "URL", "\"https://loftschool.com/android-api/basic/v1/\"")
+            resValue("string", "app_name", "loftmoney_debug")
+        }
+        release {
+            signingConfig signingConfigs.release
+            buildConfigField("String", "URL", "\"https://loftschool.com/android-api/basic/v1/\"")
+            resValue("string", "app_name", "LoftMoney")
+            minifyEnabled true
+        }
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        mobile {
+
+        }
+
+        beta {
+            applicationIdSuffix ".test"
         }
     }
 }

@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">LoftMoney1</string>
     <string name="title_hint">Title</string>
     <string name="price_hint">Price</string>
     <string name="add_button_text">Add</string>
     <string name="add_text_hello">Hello world!</string>
+    <string name="app_title">LoftMoney</string>
 
     <string name="price_template">%1$s ₽</string>
     <string name="budget_title">Budget accounting</string>
@@ -11,4 +11,8 @@
     <string name="outcome">Outcome</string>
     <string name="income">Income</string>
     <string name="enter_button_title">Enter</string>
+    <string name="remove_title">Delete</string>
+    <string name="remove_confirmation">Do you really want to delete selected items?</string>
+    <string name="balance">Balance</string>
+    <string name="finances">Доступные финансы</string>
 </resources>

@@ -14,4 +14,8 @@
     <color name="tab_indicator_color">#ffc107</color>
     <color name="income_price_color">#7ed321</color>
     <color name="add_button_text_color_disabled">#e3e3e3</color>
+    <color name="item_background_selected">#f2f2f2</color>
+    <color name="dark_grey_blue">#333f59</color>
+    <color name="apple_green">#7ed321</color>
+    <color name="pale_orange">#ff9e57</color>
 </resources>

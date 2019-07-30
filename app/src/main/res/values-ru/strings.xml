@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">ЛофтДеньги</string>
     <string name="title_hint">Название</string>
     <string name="price_hint">Цена</string>
     <string name="add_button_text">Добавить</string>
@@ -11,4 +10,7 @@
     <string name="outcome">Расходы</string>
     <string name="income">Доходы</string>
     <string name="enter_button_title">Войти</string>
+    <string name="remove_title">Удалить</string>
+    <string name="remove_confirmation">Вы действительно хотите удалить выбранные элементы?</string>
+    <string name="balance">Баланс</string>
 </resources>
